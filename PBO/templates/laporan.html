@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}
+	{{page_title}}
+{% endblock title %}
+
+
+{% block contents %}
+	<h1>{{page_title}}</h1>
+	<h3>{{Heading}}</h3>
+	<table class="table">
+	  <thead>
+	    <tr>
+	      <th scope="col">Subscribers ID</th>
+	      <th scope="col">Borrow Date</th>
+	      <th scope="col">Items ID</th>
+	      <th scope="col">Return Date</th>
+	      <th scope="col">Fee</th>
+	    </tr>
+	  </thead>
+	  <tbody>   
+	    {% for daftar in daftars %}
+	    	<tr>
+		      <td>{{daftar.0}}</td>
+		      <td>{{daftar.1}}</td>
+		      <td>{{daftar.2}}</td>
+		      <td>{{daftar.3}}</td>
+		      <td>{{daftar.4}}</td>
+		    </tr>
+	    {% endfor %}
+	  </tbody>
+	</table>
+	<a class="btn btn-success" href="/#/">Home</a>
+	<a class="btn btn-success" href="/pdf_view/">Print</a>
+{% endblock contents %}
