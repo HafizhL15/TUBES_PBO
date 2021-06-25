@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}
+	{{page_title}}
+{% endblock title %}
+
+
+{% block contents %}
+	<h1>{{page_title}}</h1>
+	<table class="table">
+	  <thead>
+	    <tr>
+	      <th scope="col">Subscribers ID</th>
+	      <th scope="col">Borrow Date</th>
+	      <th scope="col">Items ID</th>
+	      <th scope="col">Return Date</th>
+	      <th scope="col">Fee</th>
+	      <th scope="col">Hapus</th>
+	      <th scope="col">Ubah</th>
+	    </tr>
+	  </thead>
+	  <tbody>   
+	    {% for akun in semua_akun %}
+	    	<tr>
+		      <td>{{akun.subscriber_id}}</td>
+		      <td>{{akun.borrow_date}}</td>
+		      <td>{{akun.items_id}}</td>
+		      <td>{{akun.return_date}}</td>
+		      <td>{{akun.fee}}</td>
+		      <td><a class="btn btn-danger" href="{% url 'borrowing:delete' akun.id %}" title="">Delete</a>
+		      <td><a class="btn btn-warning" href="{% url 'borrowing:update' akun.id %}" title="">Update</a>
+		    </tr>
+	    {% endfor %}
+	  </tbody>
+	</table>
+	<a class="btn btn-primary" href="{% url 'borrowing:create' %}">Tambah</a>
+	<a class="btn btn-success" href="/#/">Home</a>
+{% endblock contents %}
