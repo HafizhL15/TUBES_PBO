@@ -10,7 +10,6 @@ django-weasyprint==1.1.0
 future==0.18.2
 gunicorn==20.1.0
 html5lib==1.1
-mysqlclient @ file:///E:/Django/coba/tubes/mysqlclient-1.4.6-cp39-cp39-win_amd64.whl
 Pillow==8.2.0
 pycparser==2.20
 PyPDF2==1.26.0
