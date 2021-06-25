@@ -1,3 +1,5 @@
+./mysql2sqlite.sh myDbase | sqlite3 database.sqlite
+
 -- phpMyAdmin SQL Dump
 -- version 5.1.0
 -- https://www.phpmyadmin.net/
