@@ -1,0 +1,36 @@
+  <head>
+    <title>Print Siswa</title>
+    <style>
+    	table,tr,td{
+        width:100%;
+		border: 1px solid black;
+	}
+
+    </style>
+  </head>
+<body>
+  <center><h2>Laporan Daftar Pinjaman yang sudah lewat waktu pengembalian</h2></center>
+<table>
+ <thead>
+      <tr>
+        <th scope="col">Subscribers ID</th>
+        <th scope="col">Borrow Date</th>
+        <th scope="col">Items ID</th>
+        <th scope="col">Return Date</th>
+        <th scope="col">Fee</th>
+      </tr>
+    </thead>
+    <tbody>   
+      {% for daftar in result %}
+        <tr>
+          <td>{{daftar.0}}</td>
+          <td>{{daftar.1}}</td>
+          <td>{{daftar.2}}</td>
+          <td>{{daftar.3}}</td>
+          <td>{{daftar.4}}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+</table>
+</body>
+</html>
