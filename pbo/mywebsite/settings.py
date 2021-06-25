@@ -25,7 +25,7 @@ SECRET_KEY = 'im^pjf(l91nle3k60#ns-3-tyyaa0s#okfz^$&8gh+$(-8!g0c'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ['127.0.0.1','tubestes.herokuapp.com/']
 
 
 # Application definition
